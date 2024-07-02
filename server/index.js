@@ -11,7 +11,14 @@ const customerRoutes = require("./routes/api/customerRoutes");
 const app = express();
 
 // middleware
-app.use(cors());
+// app.use(cors());
+// CORS configuration
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+};
+app.use(cors(corsOptions));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
