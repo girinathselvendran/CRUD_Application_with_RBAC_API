@@ -10,11 +10,9 @@ const customerRoutes = require("./routes/api/customerRoutes");
 
 const app = express();
 
-// middleware
-// app.use(cors());
 // CORS configuration
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://crud-application-with-rbac-ui.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 };
